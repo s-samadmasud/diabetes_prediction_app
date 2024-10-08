@@ -50,6 +50,7 @@ Feel free to fork this repository and contribute improvements or add new feature
 **License:**
 
 This project is licensed under the MIT License (see LICENSE file).
+
 Copyright (c) 2024 Suhal Samad
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
