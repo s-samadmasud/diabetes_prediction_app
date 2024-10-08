@@ -1,4 +1,4 @@
-## Diabetes Prediction App
+## Diabetes Prediction App(https://diabetes-prediction-app-qvg7.onrender.com)
 
 This is a Flask application that predicts whether someone has diabetes based on a set of user-provided medical features.
 
