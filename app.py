@@ -28,7 +28,7 @@ def predict():
 
     # Get the predicted class label and color based on prediction
     result = "No Diabetes" if prediction == 0 else "Diabetes"
-    color = "text-bg-danger" if prediction == 0 else "text-bg-success"  # Use consistent variable name
+    color = "text-bg-success" if prediction == 0 else "text-bg-danger"  # Use consistent variable name
 
     return render_template('result.html', prediction=result, color=color)
 
