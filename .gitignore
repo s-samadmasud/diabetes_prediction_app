@@ -15,6 +15,9 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+dataset/
+venv/
+
 
 ### VisualStudioCode ###
 .vscode/*
