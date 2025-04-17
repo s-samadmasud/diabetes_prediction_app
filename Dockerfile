@@ -2,13 +2,10 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Copy the requirements file
-COPY requirements.txt .
+# Force a cache invalidation for the COPY . . step
+ENV FORCE_REBUILD_APP=2  
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the entire Flask application
+# Copy all files
 COPY . .
 
 EXPOSE 5000
