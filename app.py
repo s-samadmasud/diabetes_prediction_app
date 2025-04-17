@@ -5,7 +5,7 @@ import pickle
 import jinja2
 
 # Load the model
-with open('diabetes_analysis_model.pkl', 'rb') as f:
+with open('model/diabetes_analysis_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 app = Flask(__name__)
