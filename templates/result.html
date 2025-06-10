@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prediction Result</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
   <style>
-    /* Center the card horizontally */
+    /* Center the card horizontally and vertically */
     .card-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Set the container height to 100vh for vertical centering */
+      min-height: 100vh; /* Use min-height to ensure it centers even with less content */
     }
     /* Apply different background colors based on prediction */
-    .card.{{ color }} {
-      background-color: green;
+    .card.green {
+      background-color: #198754; /* Bootstrap 5 success green */
+      color: white;
     }
 
-    .card.{{ color }} {
-      background-color: red;
+    .card.red {
+      background-color: #dc3545; /* Bootstrap 5 danger red */
+      color: white;
     }
 
-    .card.{{ color }}.text-white {
-      color: white; /* Adjust as needed for contrasting text color */
+    /* Optional: Make the card a bit wider */
+    .card {
+      width: 80%; /* Adjust as needed */
+      max-width: 500px; /* Max width for larger screens */
+      text-align: center;
     }
   </style>
 </head>
@@ -30,8 +37,9 @@
   <div class="card-container">
     <div class="card {{ color }}"> 
       <div class="card-body">
-        <h1>Prediction Result</h1>
-        <p><b>Based on your input, the predicted outcome is:</b> {{ prediction }}</p>
+        <h1 class="card-title">Prediction Result</h1>
+        <p class="card-text"><b>Based on your input, the predicted outcome is:</b></p>
+        <h2 class="card-text">{{ prediction }}</h2>
       </div>
     </div>
   </div>
