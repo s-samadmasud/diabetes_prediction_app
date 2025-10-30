@@ -22,9 +22,55 @@ This is a Flask application that predicts whether someone has diabetes based on 
 
 **Installation:**
 
-1. Clone this repository.
-2. Install the required dependencies: `pip install -r requirements.txt` (assuming you have a `requirements.txt` file listing the dependencies).
-3. Download your trained diabetes prediction model (`.pkl` file) and place it in the same directory as your application files.
+## Local Setup (Without Docker)
+
+## Installation
+
+1. **Clone the repository:**
+        
+    ```bash
+        git clone https://github.com/s-samadmasud/diabetes_prediction_app.git
+        cd diabetes_prediction_app
+2. **Create a virtual environment(conda):**
+
+   
+      ```bash
+            conda create -p venv python==3.10 -y
+            conda activate venv/
+3. **Install dependencies:**
+      ```bash
+            pip install -r requirements.txt
+4. **Run the application:**
+    ```bash
+          python app.py
+## Local Setup (with Docker)
+1. **Clone the repository:**
+        
+    ```bash
+        git clone https://github.com/s-samadmasud/diabetes_prediction_app.git
+        cd diabetes_prediction_app
+2. **Build Docker Image:**
+
+   
+      ```bash
+            docker build -t diabetes_prediction_app .
+3. **Run Container:**
+      ```bash
+            docker run -p 5000:5000 diabetes_prediction_app
+4. **Run the application:**
+    ```bash
+          http://localhost:5000/
+## Local Setup (Pull from Docker Hub)
+1. **Pull the Prebuilt Docker Image:**
+
+    ```bash
+        docker pull samad25/diabetes_prediction_app:latest
+2. **Run the Prebuilt Docker Image:**
+    ```bash            
+        docker run -p 5000:5000 samad25/diabetes_prediction_app:latest
+3. **Run the application:**
+    ```bash
+          http://localhost:5000/ 
 
 **Usage:**
 
